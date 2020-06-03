@@ -8,6 +8,7 @@ import { TriviaQuizEffects } from './ngrx/trivia-quiz.effect';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { TriviaQuizViewComponent } from './trivia-quiz-view/trivia-quiz-view.component';
 import { TriviaQuizQuestionsComponent } from './trivia-quiz-questions/trivia-quiz-questions.component';
+import { TriviaQuizResultComponent } from './trivia-quiz-result/trivia-quiz-result.component';
 
 
 const routes: Routes = [
@@ -17,7 +18,8 @@ const routes: Routes = [
 @NgModule({
     declarations: [
         TriviaQuizViewComponent,
-        TriviaQuizQuestionsComponent
+        TriviaQuizQuestionsComponent,
+        TriviaQuizResultComponent
     ],
     imports: [
         RouterModule.forChild(routes),

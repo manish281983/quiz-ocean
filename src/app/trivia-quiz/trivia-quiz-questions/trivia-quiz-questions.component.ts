@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, Input } from '@angular/core';
+import { Component, OnInit, ViewChild, Input, Output, EventEmitter} from '@angular/core';
 import { ITriviaQuiz, ITriviaAnswer } from 'src/app/core/models/triviaQuiz';
 
 @Component({
@@ -11,30 +11,28 @@ export class TriviaQuizQuestionsComponent implements OnInit {
   @Input() triviaQuizList: ITriviaQuiz[];
   @Input() questionNumber: number;
 
-  userAnswer: ITriviaAnswer;
+  @Output() submitAnswer= new EventEmitter<any>();
+
+  @Input() userAnswer: ITriviaAnswer;
   constructor() {
   }
 
   ngOnInit() {
-    this.userAnswer = {
-      answer: '',
-      status: false
-    };
+  
   }
 
   getAnswerAction(ans: any) {
-    this.userAnswer = {
-      answer: ans.answer,
-      status: (ans.status === 'true')
-    };
+    this.submitAnswer.emit(ans);
   }
 
   getUserResponse(ans: any) {
     if(this.userAnswer.answer!== ''){
       if(this.userAnswer.answer === ans.answer) {
         if(this.userAnswer.status) {
+          this.triviaQuizList[this.questionNumber- 1].status = true;
           return 'green';
         } else {
+          this.triviaQuizList[this.questionNumber- 1].status = false;
           return 'red';
         }
       } else {

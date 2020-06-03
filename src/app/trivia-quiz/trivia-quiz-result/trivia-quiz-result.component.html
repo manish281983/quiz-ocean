@@ -1,0 +1,15 @@
+<div class="triviaQuiz-result-view container">
+   <div class=""><i class="fa" 
+      [ngClass]="(triviaResult.status)? 'fa-thumbs-up thumb-up': 'fa-thumbs-down thumb-down'" aria-hidden="true"></i></div>
+   <div class="score">SCORE: {{triviaResult.percent }}%</div>
+   <div class="correct-wrong">
+      <span class="correct"><i class="fa fa-check" aria-hidden="true"></i> <strong>{{triviaResult.correct}}</strong> Correct</span>
+      <span class="wrong"><i class="fa fa-times" aria-hidden="true"></i> <strong>{{triviaResult.wrong}}</strong> Incorrect</span>
+   </div>
+   <div class="attempt">
+      <i class="fa fa-clock-o" aria-hidden="true"></i> Time:  {{triviaResult.time}} sec
+   </div>
+   <div class="exit-btn">
+      <button class="btn btn-success"> <i class="fa fa-home" aria-hidden="true"></i> HOME</button>
+   </div>
+</div>

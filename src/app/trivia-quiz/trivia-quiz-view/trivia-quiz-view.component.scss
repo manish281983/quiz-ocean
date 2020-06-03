@@ -28,11 +28,10 @@
       color: white;
       text-align: right;
       padding-top: 20px;
+      cursor: pointer;
       font-size: 30px;
     }
-    .skip-button:before{
-      content: 'SCORE: ';
-    }
+   
     .question-number {
       text-align: center;
       color: white;
@@ -47,9 +46,6 @@
       .skip-button {
         font-size: 20px;
         padding-top: 10px;
-      }
-      .skip-button:before{
-        content: 'SCORE:';
       }
       .question-number {
         font-size: 20px;

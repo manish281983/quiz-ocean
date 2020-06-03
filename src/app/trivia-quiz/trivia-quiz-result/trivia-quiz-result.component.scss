@@ -1,0 +1,54 @@
+
+.triviaQuiz-result-view {
+    background: white;
+    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    .thumb-up {
+        color: green;
+        padding: 15px;
+        font-size: 80px;
+    }
+    .thumb-down{
+        color: red;
+        padding: 15px;
+        font-size: 80px;
+    }
+    .score {
+        font-size: 30px;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    .correct-wrong {
+        padding: 10px;
+        .fa-check {
+            color: green;
+        }
+        .fa-times {
+            color: red;
+        }
+        .correct {
+            strong {
+                padding-left: 5px;
+            }
+        }
+        .wrong {
+            padding-left: 30px;
+            strong {
+                padding-left: 5px;
+            }
+        }
+    }
+
+    .attempt {
+        padding: 10px;
+    }
+    .exit-btn{
+        padding: 10px 30px;
+
+    }
+}

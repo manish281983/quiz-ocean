@@ -1,6 +1,6 @@
 <div class="triviaQuiz-view container">
-    <div [ngClass]="((triviaQuizData$ | async).triviaQuizList.length!==0)? 'triviaQuiz-container':''">
-        <div class="loader-centered text-center" *ngIf="(triviaQuizData$ | async).triviaQuizList.length===0">
+    <div [ngClass]="(triviaQuizList.length!==0)? 'triviaQuiz-container':''">
+        <div class="loader-centered text-center" *ngIf="triviaQuizList.length===0">
             <div class="logo">
                 <svg class="u-hidden" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <symbol id="wheel" viewBox="0 0 612 612">
@@ -47,18 +47,27 @@
                 </div>      
             </div>
         </div>
-        <div *ngIf="(triviaQuizData$ | async).triviaQuizList.length!==0">
+        <div *ngIf="triviaQuizList.length!==0">
             <div class="progress">
                 <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" [style.width]="progressWidth + '%'"></div>
             </div>
-            <div class="row trivia-header">
-                <div class="col-4 home-button"><i class="fa fa-home" aria-hidden="true"></i></div>
-                <div class="col-4 question-number">{{questionNumber}}/ {{(triviaQuizData$ | async).triviaQuizList.length+1}}</div>
-                <div class="col-4 skip-button">10</div>
+            <div class="row trivia-header" 
+            *ngIf="!resultSummary">
+                <div class="col-4 home-button" (click)="goToHomePage()"><i class="fa fa-home" aria-hidden="true"></i></div>
+                <div class="col-4 question-number">{{questionNumber}}/ {{totalQuestions}}</div>
+                <div class="col-4 skip-button" (click)="skipQuestion()" *ngIf="totalQuestions>=questionNumber">{{nextLbl}}</div>
             </div>
         <app-trivia-quiz-question
+        *ngIf="!resultSummary"
+        (submitAnswer)="submitAnswer($event)"
         [(questionNumber)]="questionNumber"
-        [triviaQuizList]="(triviaQuizData$ | async).triviaQuizList"></app-trivia-quiz-question>
+        [userAnswer]="userAnswer"
+        [triviaQuizList]="triviaQuizList"></app-trivia-quiz-question>
+      
+        <app-trivia-quiz-result 
+        *ngIf="resultSummary"
+        [dateTime]="dateTime"
+        [triviaQuizList]="triviaQuizList"></app-trivia-quiz-result> 
         </div>
     </div>
 </div>

@@ -4,6 +4,8 @@ export interface ITriviaQuiz {
     data: string;
     answers: ITriviaAnswer[];
     ID: string;
+    time?: string;
+    status?: boolean;
 }
 
 export interface ITriviaAnswer {
