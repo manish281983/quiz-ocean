@@ -1,0 +1,51 @@
+$theme-color: #509e2f;
+$grey-color: #f8f9fa;
+$white-color: #fff;
+$black-color: #666;
+
+$application-background: $grey-color;
+$menu-background: $white-color;
+$menu-button: $theme-color;
+$menu-text-color: $black-color;
+$menu-button-border: transparent;
+$menu-height: 66px;
+$menu-text-size: 18px;
+$menu-logo-color: $theme-color;
+
+$cart-button: $theme-color;
+$cart-text-color: $white-color;
+
+body {
+    .gbl-app-container{
+        .gbl-master-container {
+            margin-top: $menu-height;
+            .gbl-category-view {
+                .category-container {
+                    .sub-category-box {
+                        .product-card {
+                            box-shadow: none;
+                            border:  none;
+                            .justify-content-between {
+                                justify-content: left !important;
+                            }
+                            .product-title {
+                                margin-bottom: 5px;
+                                text-align: center;
+                            }
+                            .product-card-detail {
+                                .product-price {
+                                    padding-right: 10px;
+                                }
+                                /*
+                                .product-price:after {
+                                    content: "/";
+                                }*/
+                               
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

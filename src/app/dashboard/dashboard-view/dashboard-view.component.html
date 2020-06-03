@@ -1,0 +1,45 @@
+<div class="dashboard-view">
+  <app-dashboard-highlight></app-dashboard-highlight>
+  <!--<div class="container marketing">
+    <hr class="featurette-divider">
+    <div class="row">
+      <div class="col-lg-6">
+        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+        <h2>Individual</h2>
+        <p>Can you guess the most popular answers to these survey questions.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+      <div class="col-lg-6">
+        <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+        <h2>Family/ Friend</h2>
+        <p>Play with your loved ones and guess the most popular answers to these survey questions.</p>
+        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      </div>
+    </div>
+    <hr class="featurette-divider">
+   
+  </div>
+-->
+  <div class="dashboard-container" *ngIf="(dashboardData$ | async).featureProductList">
+    <h3 [textContent]="pageLabel['home.featureProduct']"></h3>
+    <div class="row">
+      <div class="product-info col-xl-2 col-lg-3 col-md-4 col-sm-6" *ngFor = "let product of (dashboardData$ | async).featureProductList;let i=index">
+        <app-product-info [product]="product"
+        (productSelectAction)="productSelectAction($event)"></app-product-info>
+      </div>
+    </div>
+  </div>
+  <!--
+  <div infiniteScroll [infiniteScrollDistance]="2" [infiniteScrollThrottle]="50" (scrolled)="onScroll()">
+    <div class="dashboard-container" *ngFor = "let category of categoryProductList| slice:0:maxProductDisplayed;let i=index">
+      <h3 class="cursor-pointer" (click)="categorySelectAction(category.id)">{{category.name}}</h3>
+      <div class="row">
+        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 mt-30" *ngFor = "let product of category.productList;let j=index">
+          <app-product-info [product]="product"
+          (productSelectAction)="productSelectAction($event)"></app-product-info>
+        </div>
+      </div>
+    </div>
+  </div>
+-->
+</div>

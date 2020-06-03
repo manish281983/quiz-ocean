@@ -1,0 +1,217 @@
+@keyframes TriviaBackgroundGradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+.triviaQuiz-view {
+  background: linear-gradient(132deg, #1abc9c, #8e44ad);
+  background-size: 400% 400%;
+  animation: TriviaBackgroundGradient 30s ease infinite;
+  height: 100vh;
+
+  .progress{
+    height: 5px;
+    margin:  0 -15px;
+    border-radius: 0;
+    background: none;
+    .progress-bar-danger {
+        background: #d9534f;
+    }
+  }
+  .trivia-header {
+    .home-button{
+      cursor: pointer;
+      font-size: 50px;
+      color: white;
+    } 
+    .skip-button {
+      color: white;
+      text-align: right;
+      padding-top: 20px;
+      font-size: 30px;
+    }
+    .skip-button:before{
+      content: 'SCORE: ';
+    }
+    .question-number {
+      text-align: center;
+      color: white;
+      padding-top: 20px;
+      font-size: 30px;
+    }
+    @media (max-width: 360px) {
+      .home-button{
+        cursor: pointer;
+        font-size: 30px;
+      } 
+      .skip-button {
+        font-size: 20px;
+        padding-top: 10px;
+      }
+      .skip-button:before{
+        content: 'SCORE:';
+      }
+      .question-number {
+        font-size: 20px;
+        padding-top: 10px;
+     
+      }
+    }
+  }
+  .triviaQuiz-container{
+   // background: white;
+   // min-height: 100vh;
+  }
+  .loader-centered{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .logo {
+        padding: 10px 0;
+        margin-bottom: 15px;
+    }
+
+    .u-hidden {
+      display: none;
+    }
+    
+    .hole {
+      width: 170px;
+      height: 170px;
+      background-color: #492540;
+      border: 5px solid #f26d5b;
+      -webkit-box-shadow: 0 0 0 10px #492540;
+              box-shadow: 0 0 0 10px #492540;
+      border-radius: 50%;
+      display: inline-block;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+    }
+    
+    .wheel {
+      fill: #c03546;
+      stroke: #f26d5b;
+      stroke-width: 10px;
+      margin: -5px;
+    }
+    
+    .wheel:nth-child(1) {
+      width: 40px;
+      height: 40px;
+      -webkit-animation: turn 2s linear 3000;
+              animation: turn 2s linear 3000;
+    }
+    
+    .wheel:nth-child(2) {
+      width: 15px;
+      height: 15px;
+      -webkit-animation: turn 2s linear 3000;
+              animation: turn 2s linear 3000;
+    }
+    
+    .wheel:nth-child(3) {
+      width: 15px;
+      height: 15px;
+      -webkit-animation: turn 2s linear 3000;
+              animation: turn 2s linear 3000;
+    }
+    
+    .wheel:nth-child(4) {
+      width: 19px;
+      height: 19px;
+      -webkit-animation: turn 2s linear 3000;
+              animation: turn 2s linear 3000;
+    }
+    
+    .wheel:nth-child(5) {
+      width: 76px;
+      height: 76px;
+      -webkit-animation: turn 3s linear 3000;
+              animation: turn 3s linear 3000;
+    }
+    
+    .wheel:nth-child(6) {
+      width: 65px;
+      height: 65px;
+      -webkit-animation: turn 2s linear 3000;
+              animation: turn 2s linear 3000;
+    }
+    
+    .wheel:nth-child(7) {
+      width: 80px;
+      height: 80px;
+      -webkit-animation: turn 3s linear 3000;
+              animation: turn 3s linear 3000;
+    }
+    
+    .wheel:nth-child(8) {
+      width: 15px;
+      height: 15px;
+      -webkit-animation: turn 3s linear 3000;
+              animation: turn 3s linear 3000;
+    }
+    
+    .wheel:nth-child(9) {
+      width: 65px;
+      height: 65px;
+      -webkit-animation: turn 2s linear 3000;
+              animation: turn 2s linear 3000;
+    }
+    
+    .wheel:nth-child(10) {
+      width: 25px;
+      height: 25px;
+      -webkit-animation: turn 3s linear 3000;
+              animation: turn 3s linear 3000;
+    }
+    
+    .wheel:nth-child(11) {
+      width: 75px;
+      height: 75px;
+      -webkit-animation: turn 4s linear 3000;
+              animation: turn 4s linear 3000;
+    }
+    
+    .wheel:nth-child(12) {
+      width: 55px;
+      height: 55px;
+      -webkit-animation: turn 4s linear 3000;
+              animation: turn 4s linear 3000;
+    }
+    
+    @-webkit-keyframes turn {
+      0%, 100% {
+        stroke-dasharray: 1600;
+      }
+      25%, 75% {
+        stroke-dasharray: 700;
+      }
+      50% {
+        stroke: #f6ea8c;
+      }
+      100% {
+        -webkit-transform: rotateZ(360deg);
+                transform: rotateZ(360deg);
+      }
+    }
+    
+    @keyframes turn {
+      0%, 100% {
+        stroke-dasharray: 1600;
+      }
+      25%, 75% {
+        stroke-dasharray: 700;
+      }
+      50% {
+        stroke: #f6ea8c;
+      }
+      100% {
+        -webkit-transform: rotateZ(360deg);
+                transform: rotateZ(360deg);
+      }
+    }
+
+  }
+}

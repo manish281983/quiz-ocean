@@ -1,0 +1,98 @@
+/* You can add global styles to this file, and also import other style files */
+//@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "./themes/green-black.scss";
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+             
+html, body { height: 100%; }
+
+body {
+    background: $application-background !important;
+    margin: 0;
+    .gbl-app-container{
+        .gbl-master-container {
+            margin-top: $menu-height;
+            .gbl-product-view {
+                .gbl-refine-container {
+                    .refine-title {
+                        color: $theme-color;
+                    }
+                }
+                .gbl-category-list {
+                    .category-row {
+                        .fa-caret-right {
+                            color: $theme-color;
+                        }
+                        .sub-category-selected {
+                            color: $theme-color;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            .gbl-category-view {
+                .category-container {
+                    .sub-category-box {
+                        .sub-category-header {
+                            .sub-category-more {
+                                color: $theme-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .gbl_menu-list {
+            box-shadow: 0 1px 5px rgba(0,0,0,.16);
+            -webkit-transition: box-shadow .2s linear;
+            -moz-transition: box-shadow .2s linear;
+            transition: box-shadow .2s linear;
+            background: $menu-background;
+            height: $menu-height;
+            .menu-logo {
+                color: $menu-logo-color;
+            }
+            .menu-row {
+                .menu-button {
+                    background-color: $menu-button;
+                    border: $menu-button-border;
+                }
+                .menu-text {
+                    color: $menu-text-color;
+                    font-size: $menu-text-size;
+                }
+            }
+        }
+    }
+
+    .cdk-overlay-container {
+        .cdk-global-overlay-wrapper {
+            .gbl-product-detail-container {
+                .product-update-btn {
+                    background: $theme-color;
+                }
+            }
+        }
+    }
+}
+
+$screen-xs: 480px !default;
+$screen-sm: 768px !default;
+$screen-md: 992px !default;
+$screen-lg: 1200px !default;
+
+$screen-xs-min: $screen-xs !default;
+$screen-sm-min: $screen-sm !default;
+$screen-md-min: $screen-md !default;
+$screen-lg-min: $screen-lg !default;
+
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.cdk-overlay-container {
+    z-index: 9999;
+}

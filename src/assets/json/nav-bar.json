@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Home",
+    "page": "dashboard"
+  },
+  {
+    "name": "Quiz",
+    "page": "category"
+  }
+]

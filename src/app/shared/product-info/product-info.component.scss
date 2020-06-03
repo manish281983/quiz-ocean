@@ -1,0 +1,24 @@
+.product-card {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    cursor: pointer;
+    position: relative;
+    height: 100%;
+    .card-body {
+      .product-title {
+        text-align: center;
+      }
+    }
+    .product-image {
+        display: block;
+        width: 100%;
+        height: 120px;
+        margin: 10px auto;
+    }
+    .product-price {
+      font-size: 17px;
+      font-weight: bold;
+    }
+}
+.product-card:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

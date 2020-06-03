@@ -1,0 +1,14 @@
+<div class="gbl-app-container">
+<div  class="sidenav"
+[ngClass]="(navSlider) ? 'nav-show': 'nav-collapse'">
+   
+</div>
+    <div [ngClass]="(navSlider) ? 'container-overlay': ''" (click)="toggleNav()"></div>
+    <lib-ng-header-view [menuList]="navBar" (menuChangeAction)="redirectPage($event)"
+    [productCount]="productCount"
+    [hidden]="checkPage(router.url)"
+    ></lib-ng-header-view>
+    <div ngClass="!checkPage(router.url)">
+        <router-outlet></router-outlet>
+    </div>    
+</div>

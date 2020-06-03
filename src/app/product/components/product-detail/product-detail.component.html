@@ -1,0 +1,27 @@
+<div class="gbl-product-detail-container">
+  <div class="close-button" (click)="closeBtnAction()">
+    <i class="fa fa-times"></i>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 image-container"> 
+        <img class="thumbnail" src="{{data.thumbImage}}">
+      </div>
+      <div  class="col-sm-6">
+        <div class="product-detail-headline">
+          {{data.name}}
+        </div>
+        <div class="row product-row">
+          <div class="col-sm-8"> 
+            Total Questions
+          </div>    
+          <div class="col-sm-4"> 
+            <span class="price">10</span>
+          </div>    
+        </div>
+        <button type="button" class="btn float-right product-update-btn"
+        (click)="addBtnAction()">START</button>
+      </div>
+    </div>
+  </div>
+</div>

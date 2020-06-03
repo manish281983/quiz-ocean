@@ -1,0 +1,8 @@
+<div class="gbl-refine-container">
+    <div class="refine-filter-container">
+        <app-category-list [categoryList]="categoryList"
+        [selectedCategory] = "selectedCategory"
+        (categorySelected)= "categorySelected($event)"
+        [title]="'QUIZ CATEGORIES'"></app-category-list>
+    </div>
+</div>

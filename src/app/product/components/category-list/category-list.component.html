@@ -1,0 +1,18 @@
+<div class="gbl-category-list" id="categoryAccordion">
+  <div class="category-headline">{{title}}</div>
+  <div class="category-row" *ngFor = "let category of categoryList;let i=index">
+    <div class="category-title">
+      <a data-toggle="collapse" data-parent="#categoryAccordion" href="#collapse{{i}}">{{category.name}}</a>
+    </div>
+    <div id="collapse{{i}}"
+      [ngClass]="(selectedCategory.parentId !== category.id) ? 'collapse': 'show'">
+        <ul class="sub-category-list"  *ngFor = "let subCategory of category.subCategoryList">
+          <li  (click)="selectProductAction(subCategory.id)" 
+          [ngClass]="(selectedCategory.id === subCategory.id) ? 'sub-category-selected': ''">
+            <i class="fa"
+            [ngClass]="(selectedCategory.id === subCategory.id) ? 'fa-caret-right': ''"
+             aria-hidden="true"></i> {{subCategory.name}}</li>
+        </ul>
+    </div>
+  </div>
+</div> 

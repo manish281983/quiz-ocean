@@ -1,0 +1,162 @@
+[
+    {
+      "name": "Frozen",
+      "id": "1",
+      "subCategoryList": [
+        {
+          "name": "Ice Cream & Ice",
+          "id": "1"
+        },
+        {
+          "name": "Breakfast",
+          "id": "1"
+        } ,
+        {
+          "name": "Appetizers & Sides",
+          "id": "1"
+        },
+        {
+          "name": "Meals",
+          "id": "1"
+        },
+        {
+          "name": "Pizza",
+          "id": "1"
+        },
+        {
+          "name": "Breads & Doughs",
+          "id": "1"
+        },
+        {
+          "name": "Meat & Seafood",
+          "id": "1"
+        },
+        {
+          "name": "Vegan & Vegetarian",
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "name": "Beer",
+      "id": "1",
+      "subCategoryList": [
+        {
+          "name": "Flavored Adult Beverages",
+          "id": "1"
+        },
+        {
+          "name": "Mixed Drinks",
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "name": "Wine",
+      "id": "1",
+      "subCategoryList": [
+        {
+          "name": "Sparkling",
+          "id": "1"
+        },
+        {
+          "name": "Mixed Drinks",
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "name": "Dairy & Eggs",
+      "id": "1",
+      "subCategoryList": [
+        {
+          "name": "Shelf Stable Milk",
+          "id": "1"
+        },
+        {
+          "name": "Packaged Cheese",
+          "id": "1"
+        },
+        {
+          "name": "Yogurt",
+          "id": "1"
+        },
+        {
+          "name": "Milk",
+          "id": "1"
+        },
+        {
+          "name": "Cream",
+          "id": "1"
+        },
+        {
+          "name": "Eggs",
+          "id": "1"
+        },
+        {
+          "name": "Butter",
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "name": "Beverages",
+      "id": "1",
+      "subCategoryList": [
+        {
+          "name": "Juice Box",
+          "id": "1"
+        },
+        {
+          "name": "Water",
+          "id": "1"
+        },
+        {
+          "name": "Coffee",
+          "id": "1"
+        },
+        {
+          "name": "Tea",
+          "id": "1"
+        },
+        {
+          "name": "Soft Drinks",
+          "id": "1"
+        },
+        {
+          "name": "Sports Drinks",
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "name": "Snacks",
+      "id": "1",
+      "subCategoryList": [
+        {
+          "name": "Chips",
+          "id": "1"
+        },
+        {
+          "name": "Candy",
+          "id": "1"
+        },
+        {
+          "name": "Chocolate",
+          "id": "1"
+        },
+        {
+          "name": "Crackers",
+          "id": "1"
+        },
+        {
+          "name": "Dried Fruit",
+          "id": "1"
+        },
+        {
+          "name": "Popcorn",
+          "id": "1"
+        }
+      ]
+    }
+  ]

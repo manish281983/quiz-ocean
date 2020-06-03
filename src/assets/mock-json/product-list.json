@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Babybel Mini Cheese Snacks",
+      "price": "8.49",
+      "quantity": "32 ct",
+      "thumbImage": "https://dsom-imager-prod.shipt.com/643902/thumb_408dcddaaa1a960950ab8c48c29834f0.jpeg"
+    },
+    {
+      "name": "Kellogg's Pure Organic Layered Fruit Bars",
+      "price": "9.49",
+      "quantity": "24 ct",
+      "thumbImage": "https://dsom-imager-prod.shipt.com/867930/thumb_c3573acdb5927796116dbd49cc464860.jpeg"
+    },
+    {
+      "name": "SkinnyPop Popcorn",
+      "price": "10.29",
+      "quantity": "28 ct",
+      "thumbImage": "https://dsom-imager-prod.shipt.com/689823/thumb_b843d963df30519ff722029d2602b951.jpeg"
+    },
+    {
+      "name": "Green Giant Organic Riced Cauliflower",
+      "price": "6.89",
+      "quantity": "48 oz",
+      "thumbImage": "https://dsom-imager-prod.shipt.com/1155116/thumb_dc3d337cc622effceacdc886bf58b6d4.jpeg"
+    },
+    {
+      "name": "Stonyfield Organic Probiotic Strawberry Yogurt Smoothies",
+      "price": "6.89",
+      "quantity": "12 ct",
+      "thumbImage": "https://dsom-imager-prod.shipt.com/6879521/thumb_9cc396fd93e219598a22c26d63f0f0f2.jpeg"
+    },
+    {
+      "name": "Sandwich Brothers Antibiotic Free Chicken Melt",
+      "price": "8.89",
+      "quantity": "15 ct",
+      "thumbImage": "https://dsom-imager-prod.shipt.com/644217/thumb_ac5b28fb7620ace05f890ec121d9520e.jpeg"
+    }
+  ]

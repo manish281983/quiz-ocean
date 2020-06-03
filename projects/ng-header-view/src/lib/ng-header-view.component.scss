@@ -1,0 +1,29 @@
+
+.gbl_menu-list {
+    background-color: #343a40;
+    padding-right:30px;
+    padding-left: 30px;
+    .menu-logo {
+        padding-right: 15px;
+    }
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .checkout-btn {
+        position: relative;
+        .badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            padding: 5px 10px;
+            border-radius: 50%;
+            background-color: red;
+            color: white;
+        }
+    }
+}

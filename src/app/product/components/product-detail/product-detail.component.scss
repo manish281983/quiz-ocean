@@ -1,0 +1,63 @@
+.gbl-product-detail-container {
+    position: relative;
+    padding: 20px 0;
+    width: 768px;
+    .product-detail-headline {
+        color: #292f38;
+        font-weight: bold;
+        font-size: 24px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 15px;
+    }
+
+    .product-row {
+        padding: 10px 0;
+
+        .color-red {
+            color: red;
+        }
+
+        .color-green {
+            color: green;
+        }
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+
+    .quanitity {
+        border-top: 1px solid #eee;
+        padding-top: 15px;
+        text-align: right;
+        .quantity-txt {
+            width: 100px;
+            height: 50px;    
+            text-align: center;
+        }
+        .quantity-btn {
+            width: 50px;
+            height: 50px;    
+        }
+    }
+
+    .product-update-btn { 
+        margin-top: 20px;
+        background: #0057b8;
+        color: #fff;
+    } 
+    .close-button {
+        position: absolute;
+        top: -22px;
+        right: -15px;
+        cursor: pointer;
+    }
+
+    .image-container {
+        text-align: center;
+        .thumbnail {
+            max-width: 100%;
+        }
+    }
+    
+}

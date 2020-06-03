@@ -1,0 +1,10 @@
+{
+    "home": {
+      "featureProduct": true,
+      "productCount": 5,
+      "featureProductLabel": "Weekly Quiz"
+    },
+    "category": {
+      "categoryCount": 2
+    }
+}
