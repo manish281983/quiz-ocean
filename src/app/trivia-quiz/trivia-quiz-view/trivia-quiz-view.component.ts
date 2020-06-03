@@ -17,6 +17,7 @@ export class TriviaQuizViewComponent implements OnInit {
   
   progressWidth: number;
   questionNumber: number;
+  
   pageLabel: any;
 
   constructor(

@@ -9,5 +9,5 @@ export interface ITriviaQuiz {
 export interface ITriviaAnswer {
     answer: string;
     status: boolean;
-    points: string;
+    points?: string;
 }

@@ -4,7 +4,9 @@
     <div class="container answers">
         <div class="row">
            <div class="col-12 col-sm-6" *ngFor="let ans of triviaQuizList[questionNumber - 1].answers">
-                <button class="btn orange">{{ans.answer}}</button>
+                <button class="btn"
+                [ngClass]="getUserResponse(ans)"
+                (click)="getAnswerAction(ans)">{{ans.answer}}</button>
             </div>
         </div>
     </div>

@@ -3,8 +3,6 @@ import { APP_CONFIG } from '../../core/data-config-key';
 import { AppConfig } from '../../core/models/app-config.model';
 import { BaseService } from '../../core/services/base.service';
 import { TriviaQuizRequestModel, TriviaQuizModel } from './trivia-quiz-service.model';
-import {PAGE_CONTENTS} from '../../app.constant';
-import { retry } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
