@@ -1,0 +1,21 @@
+{
+  "name": "ng-header-view",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  },
+  "main": "bundles/ng-header-view.umd.js",
+  "module": "fesm5/ng-header-view.js",
+  "es2015": "fesm2015/ng-header-view.js",
+  "esm5": "esm5/ng-header-view.js",
+  "esm2015": "esm2015/ng-header-view.js",
+  "fesm5": "fesm5/ng-header-view.js",
+  "fesm2015": "fesm2015/ng-header-view.js",
+  "typings": "ng-header-view.d.ts",
+  "metadata": "ng-header-view.metadata.json",
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "^1.9.0"
+  }
+}

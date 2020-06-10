@@ -1,0 +1,151 @@
+{
+  "home": {
+    "featureProductList": [
+      {
+        "deleted": false,
+        "categoryId": "a13642a1-9ef8-4d20-b0e1-b501efa4b666",
+        "unavailable": false,
+        "featureProduct": true,
+        "thumbImage": "https://quiz-ocean.s3.us-east-2.amazonaws.com/survey-quiz/spiderman.jpg",
+        "id": "d11a3e13-7c5f-4b70-a02a-09e74c8f0152",
+        "price": "",
+        "description": "Do you know all of Spider-man or not? Take this interactive quiz and you will see the results in a matter of a few minutes! Good luck!!",
+        "name": "How well do you know Spider-man"
+      },
+      {
+        "deleted": false,
+        "categoryId": "a13642a1-9ef8-4d20-b0e1-b501efa4b666",
+        "unavailable": false,
+        "featureProduct": true,
+        "thumbImage": "https://quiz-ocean.s3.us-east-2.amazonaws.com/survey-quiz/superheros/batman.JPG",
+        "id": "12ca372c-7cbd-44fc-86a0-dc26f9322101",
+        "price": "",
+        "description": "The Dark Knight has many secrets that you need to uncover in this gk questions quiz",
+        "name": "The Ultimate Dark Night Trivia"
+      },
+      {
+        "quantity": "1",
+        "deleted": false,
+        "categoryId": "a13642a1-9ef8-4d20-b0e1-b501efa4b666",
+        "unavailable": false,
+        "featureProduct": true,
+        "thumbImage": "https://quiz-ocean.s3.us-east-2.amazonaws.com/survey-quiz/superheros/ironman.JPG",
+        "id": "8affce15-9dfc-47ac-89c5-f8c941a59033",
+        "price": "",
+        "description": "Do you consider yourself an expert in all things Iron-Man? This Iron Man Quiz will really tickle your brain cells. ",
+        "name": "Iron Man Quiz: Only A True Tony Stark Fan Will Pass",
+        "discount": "0"
+      }
+    ],
+    "categoryProductList": [
+      {
+        "id": "a13642a1-9ef8-4d20-b0e1-b501efa4b666",
+        "name": "Comics heroes",
+        "productList": [
+          {
+            "deleted": false,
+            "categoryId": "a13642a1-9ef8-4d20-b0e1-b501efa4b666",
+            "unavailable": false,
+            "featureProduct": true,
+            "thumbImage": "https://quiz-ocean.s3.us-east-2.amazonaws.com/survey-quiz/spiderman.jpg",
+            "id": "d11a3e13-7c5f-4b70-a02a-09e74c8f0152",
+            "price": "",
+            "description": "Do you know all of Spider-man or not? Take this interactive quiz and you will see the results in a matter of a few minutes! Good luck!!",
+            "name": "How well do you know Spider-man"
+          },
+          {
+            "deleted": false,
+            "categoryId": "a13642a1-9ef8-4d20-b0e1-b501efa4b666",
+            "unavailable": false,
+            "featureProduct": true,
+            "thumbImage": "https://quiz-ocean.s3.us-east-2.amazonaws.com/survey-quiz/superheros/batman.JPG",
+            "id": "12ca372c-7cbd-44fc-86a0-dc26f9322101",
+            "price": "",
+            "description": "The Dark Knight has many secrets that you need to uncover in this gk questions quiz",
+            "name": "The Ultimate Dark Night Trivia"
+          },
+          {
+            "deleted": false,
+            "categoryId": "a13642a1-9ef8-4d20-b0e1-b501efa4b666",
+            "thumbImage": "https://quiz-ocean.s3.us-east-2.amazonaws.com/survey-quiz/superheros/hulk.JPG",
+            "price": "",
+            "description": " Can you qualify the Incredible HULK quiz?",
+            "id": "9a0ad794-af81-42e3-beb1-c9a723b5a705",
+            "name": "Are you the hulk?"
+          },
+          {
+            "deleted": false,
+            "categoryId": "a13642a1-9ef8-4d20-b0e1-b501efa4b666",
+            "unavailable": false,
+            "featureProduct": false,
+            "thumbImage": "https://quiz-ocean.s3.us-east-2.amazonaws.com/survey-quiz/superheros/superman.JPG",
+            "id": "aca751fb-7bcc-4304-a745-99eaf1f4765f",
+            "price": "",
+            "description": "How well do you know about DC Comics' most famous character? Test Your Superhero Knowledge In Our Superman Quiz.",
+            "name": "Think you know Superman"
+          },
+          {
+            "quantity": "1",
+            "deleted": false,
+            "categoryId": "a13642a1-9ef8-4d20-b0e1-b501efa4b666",
+            "unavailable": false,
+            "featureProduct": true,
+            "thumbImage": "https://quiz-ocean.s3.us-east-2.amazonaws.com/survey-quiz/superheros/ironman.JPG",
+            "id": "8affce15-9dfc-47ac-89c5-f8c941a59033",
+            "price": "",
+            "description": "Do you consider yourself an expert in all things Iron-Man? This Iron Man Quiz will really tickle your brain cells. ",
+            "name": "Iron Man Quiz: Only A True Tony Stark Fan Will Pass",
+            "discount": "0"
+          }
+        ]
+      },
+      {
+        "id": "66334235-842e-46e2-be1e-1507818f4d28",
+        "name": "Sports",
+        "productList": [
+          {
+            "deleted": false,
+            "categoryId": "66334235-842e-46e2-be1e-1507818f4d28",
+            "unavailable": false,
+            "featureProduct": false,
+            "thumbImage": "https://quiz-ocean.s3.us-east-2.amazonaws.com/survey-quiz/Cricket-Quiz.png",
+            "id": "32826c8e-bdcc-4c25-9bc1-4696feeb5830",
+            "price": "",
+            "name": "Cricket"
+          }
+        ]
+      },
+      {
+        "id": "bf25c5cb-ccd9-46a7-a392-a249392fb75d",
+        "name": "General Knowledge",
+        "productList": [
+          {
+            "deleted": false,
+            "categoryId": "bf25c5cb-ccd9-46a7-a392-a249392fb75d",
+            "unavailable": true,
+            "featureProduct": true,
+            "thumbImage": "https://quiz-ocean.s3.us-east-2.amazonaws.com/survey-quiz/corona-virus.jpg",
+            "id": "b290678a-88b8-4710-8406-7e19d87e9ebd",
+            "price": "",
+            "name": "Corona Virus"
+          }
+        ]
+      }
+    ]
+  },
+  "category": {
+    "categoryProductList": null
+  },
+  "product": {
+    "categoryList": null,
+    "category": null,
+    "productList": null
+  },
+  "detail": {
+    "productDetail": null
+  },
+  "trivia": {
+    "productDetail": null,
+    "triviaQuizList": null
+  }
+}

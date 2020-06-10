@@ -1,0 +1,124 @@
+{
+  "configVersion": 1,
+  "timestamp": 1591833451164,
+  "index": "https://manish281983.github.io/quiz-ocean/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://manish281983.github.io/quiz-ocean/10.fb83fa72b1d61f8713b8.js",
+        "https://manish281983.github.io/quiz-ocean/11.b0d535d5432071193d15.js",
+        "https://manish281983.github.io/quiz-ocean/12.664e493a18bf74f6c69e.js",
+        "https://manish281983.github.io/quiz-ocean/2.906da169a3d394ce46d0.js",
+        "https://manish281983.github.io/quiz-ocean/7.f60e9717964ef4cb896e.js",
+        "https://manish281983.github.io/quiz-ocean/8.a6e8d36b5418d2c98c71.js",
+        "https://manish281983.github.io/quiz-ocean/9.b4d9ee17f22db7c65336.js",
+        "https://manish281983.github.io/quiz-ocean/common.a8237b72b4204a4e2ef8.js",
+        "https://manish281983.github.io/quiz-ocean/es2015-polyfills.5ac60483c2021695cd68.js",
+        "https://manish281983.github.io/quiz-ocean/favicon.ico",
+        "https://manish281983.github.io/quiz-ocean/index.html",
+        "https://manish281983.github.io/quiz-ocean/main.7aad42e79ac34e19b0a5.js",
+        "https://manish281983.github.io/quiz-ocean/polyfills.c846f33960a54d0b75e7.js",
+        "https://manish281983.github.io/quiz-ocean/runtime.6fee0ab0f016fe78104b.js",
+        "https://manish281983.github.io/quiz-ocean/scripts.fd12c80ebcc479d5730a.js",
+        "https://manish281983.github.io/quiz-ocean/styles.bf83d03255e8adff08c2.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "https://manish281983.github.io/quiz-ocean/assets/db.xlsx",
+        "https://manish281983.github.io/quiz-ocean/assets/icons/icon-128x128.png",
+        "https://manish281983.github.io/quiz-ocean/assets/icons/icon-144x144.png",
+        "https://manish281983.github.io/quiz-ocean/assets/icons/icon-152x152.png",
+        "https://manish281983.github.io/quiz-ocean/assets/icons/icon-192x192.png",
+        "https://manish281983.github.io/quiz-ocean/assets/icons/icon-384x384.png",
+        "https://manish281983.github.io/quiz-ocean/assets/icons/icon-512x512.png",
+        "https://manish281983.github.io/quiz-ocean/assets/icons/icon-72x72.png",
+        "https://manish281983.github.io/quiz-ocean/assets/icons/icon-96x96.png",
+        "https://manish281983.github.io/quiz-ocean/assets/json/application-config.json",
+        "https://manish281983.github.io/quiz-ocean/assets/json/nav-bar.json",
+        "https://manish281983.github.io/quiz-ocean/assets/mock-img/banner1.jpeg",
+        "https://manish281983.github.io/quiz-ocean/assets/mock-img/banner2.jpeg",
+        "https://manish281983.github.io/quiz-ocean/assets/mock-img/banner3.jpeg",
+        "https://manish281983.github.io/quiz-ocean/assets/mock-json/category-list.json",
+        "https://manish281983.github.io/quiz-ocean/assets/mock-json/home.json",
+        "https://manish281983.github.io/quiz-ocean/assets/mock-json/product-list.json",
+        "https://manish281983.github.io/quiz-ocean/assets/mock-json/quiz-list.json",
+        "https://manish281983.github.io/quiz-ocean/assets/mock-json/trivia.json",
+        "https://manish281983.github.io/quiz-ocean/fontawesome-webfont.674f50d287a8c48dc19b.eot",
+        "https://manish281983.github.io/quiz-ocean/fontawesome-webfont.912ec66d7572ff821749.svg",
+        "https://manish281983.github.io/quiz-ocean/fontawesome-webfont.af7ae505a9eed503f8b8.woff2",
+        "https://manish281983.github.io/quiz-ocean/fontawesome-webfont.b06871f281fee6b241d6.ttf",
+        "https://manish281983.github.io/quiz-ocean/fontawesome-webfont.fee66e712a8a08eef580.woff"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "https://manish281983.github.io/quiz-ocean/10.fb83fa72b1d61f8713b8.js": "8011ee81655c1893fbc57aae3aaec9a4f9e6f170",
+    "https://manish281983.github.io/quiz-ocean/11.b0d535d5432071193d15.js": "827bb8b2595aabd8ac8ba9700e13ce3a59bd10ba",
+    "https://manish281983.github.io/quiz-ocean/12.664e493a18bf74f6c69e.js": "04868916e550f974a0d27b69ecfa09903439502f",
+    "https://manish281983.github.io/quiz-ocean/2.906da169a3d394ce46d0.js": "5b0acb56ae90d5a75d6d7f151d9990eb08a38052",
+    "https://manish281983.github.io/quiz-ocean/7.f60e9717964ef4cb896e.js": "ef1b4b16ebb3d721dd998ac5f87aab07b4e8ee06",
+    "https://manish281983.github.io/quiz-ocean/8.a6e8d36b5418d2c98c71.js": "b5de91b37fde6629aa5270f6ceee5c40c0d3f4dc",
+    "https://manish281983.github.io/quiz-ocean/9.b4d9ee17f22db7c65336.js": "92958c9bfe8a4111820ba3e7d861f849e9373e98",
+    "https://manish281983.github.io/quiz-ocean/assets/db.xlsx": "0464cdd340d21b25aa917bce9efe06a3100486d2",
+    "https://manish281983.github.io/quiz-ocean/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
+    "https://manish281983.github.io/quiz-ocean/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
+    "https://manish281983.github.io/quiz-ocean/assets/icons/icon-152x152.png": "7479a9477815dfd9668d60f8b3b2fba709b91310",
+    "https://manish281983.github.io/quiz-ocean/assets/icons/icon-192x192.png": "1abd80d431a237a853ce38147d8c63752f10933b",
+    "https://manish281983.github.io/quiz-ocean/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "https://manish281983.github.io/quiz-ocean/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "https://manish281983.github.io/quiz-ocean/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
+    "https://manish281983.github.io/quiz-ocean/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://manish281983.github.io/quiz-ocean/assets/json/application-config.json": "09b508196cfc07ffec309e1170587e541f5c7d8c",
+    "https://manish281983.github.io/quiz-ocean/assets/json/nav-bar.json": "d195adc14784e9f9c86c563bf4147d5aca998302",
+    "https://manish281983.github.io/quiz-ocean/assets/mock-img/banner1.jpeg": "ee0134c90d84ef3420719c93d1a0d53195ad8177",
+    "https://manish281983.github.io/quiz-ocean/assets/mock-img/banner2.jpeg": "be31a3091bdcb6d3639e991e303ab7450ff5db92",
+    "https://manish281983.github.io/quiz-ocean/assets/mock-img/banner3.jpeg": "ee14e20716fb6a1b4eaae1bc0a0b13e85cc8bf7c",
+    "https://manish281983.github.io/quiz-ocean/assets/mock-json/category-list.json": "7954b76c6857f224df7bc2b681001fd3c98f9399",
+    "https://manish281983.github.io/quiz-ocean/assets/mock-json/home.json": "4f608877aa72a7569f49f18636b0f2c4445dcbdb",
+    "https://manish281983.github.io/quiz-ocean/assets/mock-json/product-list.json": "23e21979fdb4ee057e90d6a6495f208957078e18",
+    "https://manish281983.github.io/quiz-ocean/assets/mock-json/quiz-list.json": "64dff6997a852b8cc05396b6a5b76e11e1396bfc",
+    "https://manish281983.github.io/quiz-ocean/assets/mock-json/trivia.json": "7f74a6b1c9e32dae2c9dde7eb8a847804dbfa687",
+    "https://manish281983.github.io/quiz-ocean/common.a8237b72b4204a4e2ef8.js": "5731cb62af21c5276dedadbb9a51c3b5a6d61375",
+    "https://manish281983.github.io/quiz-ocean/es2015-polyfills.5ac60483c2021695cd68.js": "335dd1b0174d9fb3696d0cd5dd3b73ace2a4811d",
+    "https://manish281983.github.io/quiz-ocean/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "https://manish281983.github.io/quiz-ocean/fontawesome-webfont.674f50d287a8c48dc19b.eot": "d980c2ce873dc43af460d4d572d441304499f400",
+    "https://manish281983.github.io/quiz-ocean/fontawesome-webfont.912ec66d7572ff821749.svg": "98a8aa5cf7d62c2eff5f07ede8d844b874ef06ed",
+    "https://manish281983.github.io/quiz-ocean/fontawesome-webfont.af7ae505a9eed503f8b8.woff2": "d6f48cba7d076fb6f2fd6ba993a75b9dc1ecbf0c",
+    "https://manish281983.github.io/quiz-ocean/fontawesome-webfont.b06871f281fee6b241d6.ttf": "13b1eab65a983c7a73bc7997c479d66943f7c6cb",
+    "https://manish281983.github.io/quiz-ocean/fontawesome-webfont.fee66e712a8a08eef580.woff": "28b782240b3e76db824e12c02754a9731a167527",
+    "https://manish281983.github.io/quiz-ocean/index.html": "7a4719e0ad8c49984c903dfcd8ffdf27443495bb",
+    "https://manish281983.github.io/quiz-ocean/main.7aad42e79ac34e19b0a5.js": "cb5c29984d44db2da7debb9f46515282e35d02bd",
+    "https://manish281983.github.io/quiz-ocean/polyfills.c846f33960a54d0b75e7.js": "0909fab8bdb863ee28db055f8099c0135961c23a",
+    "https://manish281983.github.io/quiz-ocean/runtime.6fee0ab0f016fe78104b.js": "87932b3625c38af5d2f9699e99672a93fd68b688",
+    "https://manish281983.github.io/quiz-ocean/scripts.fd12c80ebcc479d5730a.js": "53f15bbdbe82dea1067e3f987ee1b26f3e8c3cf6",
+    "https://manish281983.github.io/quiz-ocean/styles.bf83d03255e8adff08c2.css": "5ca549b0d2f5fdd89f5e01fa5328757bc7896fe7"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ]
+}
