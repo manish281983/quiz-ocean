@@ -5,6 +5,8 @@ import { BaseService } from '../../core/services/base.service';
 import { DashboardRequestModel, DashboardModel } from './dashboard-service.model';
 import {PAGE_CONTENTS} from '../../app.constant';
 import { retry } from 'rxjs/operators';
+import homeResponse from '../../../assets/mock-json/home.json';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +19,10 @@ export class DashboardService {
    }
 
   getDashboard() {
+    return new Observable((observer) => {
+      observer.next(homeResponse)
+      observer.complete()
+  });
     const httpOptions = this.getHTTPRequest();
     return this.baseService.doPost(this.appConfig.featureAPI, httpOptions);
   }
@@ -33,12 +39,13 @@ export class DashboardService {
   }
 
   mapProduct(productList) {
-     return productList.map(product =>{
+    return productList.map(product =>{
         return {
           name: product.name,
           id: product.id,
           categoryId: product.categoryId,
           price: product.price,
+          description: product.description,
           quantity: product.quantity,
           thumbImage: product.thumbImage,
           discount: product.discount || 0,

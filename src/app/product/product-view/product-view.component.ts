@@ -2,7 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ProductModel } from '../services/product-service.model';
 import { ProductHelperService } from '../helpers/product-helper.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ICategory } from 'src/app/core/models/category';
 import { IProduct } from 'src/app/core/models/product';
 import { MatDialog } from '@angular/material/dialog';
@@ -25,6 +25,7 @@ export class ProductViewComponent implements OnInit, AfterViewInit  {
   parentCategoryId: string;
   productList: any;
   constructor( 
+    private router: Router,
     private cartHelperService: CartHelperService,
     private productHelperService: ProductHelperService, 
     private route: ActivatedRoute,
@@ -66,6 +67,7 @@ export class ProductViewComponent implements OnInit, AfterViewInit  {
       quantity: product.quantity,
       thumbImage: product.thumbImage,
       unavailable: product.unavailable,
+      description: product.description,
       price: product.price,
       productCount: '0'
     };
@@ -74,7 +76,7 @@ export class ProductViewComponent implements OnInit, AfterViewInit  {
     });
     dialogRef.afterClosed().subscribe(result => {
       if(result) {
-        this.cartHelperService.updateCart(result);
+        this.router.navigate(['trivia-quiz/', productDetail.id]);
       }
     });
   }

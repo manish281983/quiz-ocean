@@ -1,11 +1,9 @@
 
 .triviaQuiz-question-view {
   .question {
-    text-transform: uppercase;
     color: white;
-    font-size: 30px;
+    font-size: 35px;
     text-align: center;
-    font-weight: bold;
     position: fixed;
     padding: 15px;
     top: 40%;
@@ -85,10 +83,11 @@
     @media (max-width: 360px) {
         .question {
             top: 25%; 
-            font-size: 20px;
+            font-size: 25px;
         }
         .answers {
             .btn {
+                font-size: 20px;
                 padding: 5px 0;
             }
         }

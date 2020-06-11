@@ -18,6 +18,10 @@ The Library can be continuously built & watched with the following step
 
 `npm run watch-lib`
 
+
+ng build --prod --base-href https://manish281983.github.io/quiz-ocean/
+
+ngh --dir=dist/quiz-business
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).

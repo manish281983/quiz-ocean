@@ -11,7 +11,7 @@ import { from } from 'rxjs';
 export class AppComponent implements OnInit {
   navBar: any;
   productCount: number;
-  constructor(private router: Router) {
+  constructor(public router: Router) {
   }
 
   navSlider: boolean;

@@ -6,5 +6,5 @@ export const APP_LABELS = {
 export const PAGE_CONTENTS = {
     'home.productCount' : 5,
     'home.featureProduct': true,
-    'category.categoryCount': 2
+    'category.categoryCount': 5
 };

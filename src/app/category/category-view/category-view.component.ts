@@ -64,6 +64,7 @@ export class CategoryViewComponent implements OnInit  {
       quantity: product.quantity,
       thumbImage: product.thumbImage,
       unavailable: product.unavailable,
+      description: product.description,
       price: product.price,
       productCount: '0'
     };
@@ -72,7 +73,7 @@ export class CategoryViewComponent implements OnInit  {
     });
     dialogRef.afterClosed().subscribe(result => {
       if(result) {
-        this.cartHelperService.updateCart(result);
+        this.router.navigate(['trivia-quiz/', productDetail.id]);
       }
     });
   }

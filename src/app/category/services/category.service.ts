@@ -4,6 +4,8 @@ import {PAGE_CONTENTS} from '../../app.constant';
 import { AppConfig } from '../../core/models/app-config.model';
 import { BaseService } from '../../core/services/base.service';
 import { CategoryRequestModel, CategoryModel } from './category-service.model';
+import categoryResponse from '../../../assets/mock-json/category-list.json';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +17,10 @@ export class CategoryService {
    }
 
   getCategory() {
+    return new Observable((observer) => {
+      observer.next(categoryResponse)
+      observer.complete()
+  });
     const httpOptions = this.getHTTPRequest();
     return this.baseService.doPost(this.appConfig.categoryAPI, httpOptions);
   }

@@ -14,6 +14,9 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { CartModule} from '../app/cart/cart.module';
 import { EffectsModule } from '@ngrx/effects';
+import {AngularFireModule} from 'angularfire2';
+import {AngularFireDatabaseModule} from 'angularfire2/database';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { EffectsModule } from '@ngrx/effects';
     ]),
     HttpClientModule,
     CartModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
+ 
   ],
   entryComponents: [],
   providers: [

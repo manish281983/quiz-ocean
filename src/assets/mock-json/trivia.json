@@ -1,0 +1,318 @@
+{
+  "home": {
+    "featureProductList": null,
+    "categoryProductList": null
+  },
+  "category": {
+    "categoryProductList": null
+  },
+  "product": {
+    "categoryList": null,
+    "category": null,
+    "productList": null
+  },
+  "detail": {
+    "productDetail": null
+  },
+  "trivia": {
+    "productDetail": {
+      "deleted": false,
+      "categoryId": "a13642a1-9ef8-4d20-b0e1-b501efa4b666",
+      "unavailable": false,
+      "featureProduct": true,
+      "thumbImage": "https://quiz-ocean.s3.us-east-2.amazonaws.com/survey-quiz/spiderman.jpg",
+      "id": "d11a3e13-7c5f-4b70-a02a-09e74c8f0152",
+      "price": "",
+      "description": "Do you know all of Spider-man or not? Take this interactive quiz and you will see the results in a matter of a few minutes! Good luck!!",
+      "name": "How well do you know Spider-man"
+    },
+    "triviaQuizList": [
+      {
+        "question": " In The Superior Spider-Man, what villain replaced Peter Parker as Spider-Man?",
+        "id": "e2759355-179f-4d75-9402-d914aaa40bf6",
+        "answers": [
+          {
+            "answer": "Doctor Octopus ",
+            "points": "0",
+            "status": "true"
+          },
+          {
+            "answer": "Looter",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Green Goblin",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Kingpin",
+            "points": "0",
+            "status": "false"
+          }
+        ]
+      },
+      {
+        "question": "Who was the first super-villain Spider-Man ever encountered?",
+        "id": "4a40ad33-a1f8-4a46-af1a-00ac0c75f6ad",
+        "answers": [
+          {
+            "answer": "Chameleon",
+            "points": "30",
+            "status": "true"
+          },
+          {
+            "answer": "Green Goblin",
+            "points": "20",
+            "status": "false"
+          },
+          {
+            "answer": "Electro",
+            "points": "12",
+            "status": "false"
+          },
+          {
+            "answer": "Doctor Octopus",
+            "points": "6",
+            "status": "false"
+          }
+        ]
+      },
+      {
+        "question": "What super-villain kidnapped and murdered Peter Parker's girlfriend Gwen Stacy?",
+        "id": "4a40ad33-a1f8-4a46-af1a-00ac0c75f6af",
+        "answers": [
+          {
+            "answer": "Green Goblin",
+            "points": "33",
+            "status": "true"
+          },
+          {
+            "answer": "Sandman",
+            "points": "27",
+            "status": "false"
+          },
+          {
+            "answer": "Lizard",
+            "points": "17",
+            "status": "false"
+          },
+          {
+            "answer": "Scorpion",
+            "points": "11",
+            "status": "false"
+          }
+        ]
+      },
+      {
+        "question": "What color is Mary Jane Watson's hair?",
+        "id": "4a40ad33-a1f8-4a46-af1a-00ac0c75f6ae",
+        "answers": [
+          {
+            "answer": "Brown",
+            "points": "45",
+            "status": "false"
+          },
+          {
+            "answer": "Red",
+            "points": "32",
+            "status": "true"
+          },
+          {
+            "answer": "Green",
+            "points": "27",
+            "status": "false"
+          },
+          {
+            "answer": "Yellow",
+            "points": "13",
+            "status": "false"
+          }
+        ]
+      },
+      {
+        "question": "What is the name of Peter Parker's teenage daughter?",
+        "id": "a48fbd41-c9d8-4a43-bb2e-6479c356b2a0",
+        "answers": [
+          {
+            "answer": "Katie",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Lisa",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Gwen",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "May",
+            "points": "0",
+            "status": "true"
+          }
+        ]
+      },
+      {
+        "question": "Which of Peter's high school crushes married Harry Osborn",
+        "id": "ae82ca9b-7bf8-462c-b5bd-c776331e8299",
+        "answers": [
+          {
+            "answer": "Jessica Jones",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Liz Allan",
+            "points": "0",
+            "status": "true"
+          },
+          {
+            "answer": "Black Cat ",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Mary Jane Watson",
+            "points": "0",
+            "status": "false"
+          }
+        ]
+      },
+      {
+        "question": " What was the name of Peter Parker's uncle?",
+        "id": "e9335bb0-8cc1-4d8c-9056-836a98dc3ee2",
+        "answers": [
+          {
+            "answer": "Andy",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Ben",
+            "points": "0",
+            "status": "true"
+          },
+          {
+            "answer": "John",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Mike",
+            "points": "0",
+            "status": "false"
+          }
+        ]
+      },
+      {
+        "question": "What other student did the radioactive spider bite besides Peter?",
+        "id": "e0bf8981-7d1b-4cbd-9725-778df15b372f",
+        "answers": [
+          {
+            "answer": "Cindy Moon",
+            "points": "0",
+            "status": "true"
+          },
+          {
+            "answer": "Harry Osborn",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Michelle Gonzales",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Liz Allan",
+            "points": "0",
+            "status": "false"
+          }
+        ]
+      },
+      {
+        "question": "Which Spider-Man villain is the CEO of Fireheart Enterprises?",
+        "id": "f180caf2-b2b2-412c-882a-352dbc358368",
+        "answers": [
+          {
+            "answer": "Electro",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Doctor Octopus",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Kingpin",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Puma",
+            "points": "0",
+            "status": "false"
+          }
+        ]
+      },
+      {
+        "question": "What was the name of Peter Parker's clone?",
+        "id": "99a9fdd9-5863-4364-95a9-83421dd9167e",
+        "answers": [
+          {
+            "answer": "Ben Reilly",
+            "points": "0",
+            "status": "true"
+          },
+          {
+            "answer": "Dexter",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Max Modell",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Calypso",
+            "points": "0",
+            "status": "false"
+          }
+        ]
+      },
+      {
+        "question": "Which Spider-Man villain dresses and acts like a 1920s gangster?",
+        "id": "f8d6aff7-62d8-4a20-9c75-2b198ab1aec8",
+        "answers": [
+          {
+            "answer": "Looter",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Electro",
+            "points": "0",
+            "status": "false"
+          },
+          {
+            "answer": "Hammerhead",
+            "points": "0",
+            "status": "true"
+          },
+          {
+            "answer": "Kingpin",
+            "points": "0",
+            "status": "false"
+          }
+        ]
+      }
+    ]
+  }
+}

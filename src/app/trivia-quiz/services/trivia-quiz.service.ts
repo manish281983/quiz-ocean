@@ -3,6 +3,8 @@ import { APP_CONFIG } from '../../core/data-config-key';
 import { AppConfig } from '../../core/models/app-config.model';
 import { BaseService } from '../../core/services/base.service';
 import { TriviaQuizRequestModel, TriviaQuizModel } from './trivia-quiz-service.model';
+import {AngularFireDatabase} from 'angularfire2/database';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,20 +12,27 @@ import { TriviaQuizRequestModel, TriviaQuizModel } from './trivia-quiz-service.m
 export class TriviaQuizService {
   constructor(
     @Inject(APP_CONFIG) public appConfig: AppConfig,
-    protected baseService: BaseService
+    protected baseService: BaseService,
+    private db: AngularFireDatabase
   ) {
    }
 
   getTriviaQuiz(productId: string) {
+    return this.getTriviaFirbase(productId);
     const httpOptions = this.getHTTPRequest(productId);
+
     return this.baseService.doPost(this.appConfig.featureAPI, httpOptions);
   }
 
+  getTriviaFirbase(id): Observable<any[]>{
+    return this.db.list('trivia-'+id).valueChanges();
+  }
+
   mapTriviaQuizResponse(data: any) {
-    if (data.trivia) {
+    if (data.length!==0) {
       const response: TriviaQuizModel = {
-        productDetail: data.trivia.productDetail,
-        triviaQuizList: data.trivia.triviaQuizList || []
+        productDetail: data[0].trivia.productDetail,
+        triviaQuizList: data[0].trivia.triviaQuizList || []
       };
       return response;
     }

@@ -5,6 +5,9 @@ import { BaseService } from '../../core/services/base.service';
 import { ProductRequestModel, ProductModel } from './product-service.model';
 import {PAGE_CONTENTS} from '../../app.constant';
 import { ICategory } from 'src/app/core/models/category';
+import productResponse from '../../../assets/mock-json/product-list.json';
+import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -16,6 +19,11 @@ export class ProductService {
    }
 
   getProduct(categoryId: string) {
+    return new Observable((observer) => {
+      observer.next(productResponse)
+      observer.complete()
+  });
+   
     const httpOptions = this.getHTTPRequest(categoryId);
     return this.baseService.doPost(this.appConfig.productAPI, httpOptions);
   }
