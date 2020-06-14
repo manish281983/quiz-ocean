@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Store, select } from '@ngrx/store';
-import { TriviaQuizAction } from '../ngrx/trivia-quiz.action';
+import { TriviaQuizAction, TriviaQuizResetAction } from '../ngrx/trivia-quiz.action';
 import { TriviaQuizModel } from '../services/trivia-quiz-service.model';
 
 @Injectable({
@@ -22,5 +22,9 @@ export class TriviaQuizHelperService {
 
   getTriviaQuiz(productId: string) {
     this.store$.dispatch(new TriviaQuizAction(productId));
+  }
+
+  resetTriviaQuiz() {
+    this.store$.dispatch(new TriviaQuizResetAction());
   }
 }

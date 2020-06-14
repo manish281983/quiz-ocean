@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ITriviaQuiz } from 'src/app/core/models/triviaQuiz';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-trivia-quiz-result',
@@ -13,7 +14,7 @@ export class TriviaQuizResultComponent implements OnInit {
   @Input() dateTime: any;
 
   triviaResult: any;
-  constructor() {
+  constructor( private router: Router) {
   }
 
   ngOnInit() {
@@ -43,6 +44,10 @@ export class TriviaQuizResultComponent implements OnInit {
     this.triviaResult.time = displayMin + ' ' + Math.floor(diffTime / 1000 % 60);
 
     this.triviaResult.status = (this.triviaResult.percent>= 75)
+  }
+
+  goToHomePage() {
+    this.router.navigate(['/dashboard']);
   }
 
 }

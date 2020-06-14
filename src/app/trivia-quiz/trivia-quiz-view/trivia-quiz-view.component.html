@@ -55,7 +55,6 @@
             *ngIf="!resultSummary">
                 <div class="col-4 home-button" (click)="goToHomePage()"><i class="fa fa-home" aria-hidden="true"></i></div>
                 <div class="col-4 question-number">{{questionNumber}}/ {{totalQuestions}}</div>
-                <div class="col-4 skip-button" (click)="skipQuestion()" *ngIf="totalQuestions>=questionNumber">{{nextLbl}}</div>
             </div>
         <app-trivia-quiz-question
         *ngIf="!resultSummary"

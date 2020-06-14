@@ -25,10 +25,12 @@ export class TriviaQuizService {
   }
 
   getTriviaFirbase(id): Observable<any[]>{
+    console.log(id)
     return this.db.list('trivia-'+id).valueChanges();
   }
 
   mapTriviaQuizResponse(data: any) {
+    console.log(data);
     if (data.length!==0) {
       const response: TriviaQuizModel = {
         productDetail: data[0].trivia.productDetail,

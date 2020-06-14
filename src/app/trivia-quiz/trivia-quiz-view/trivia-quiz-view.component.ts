@@ -6,6 +6,7 @@ import { TriviaQuizModel } from '../services/trivia-quiz-service.model';
 import {APP_LABELS} from '../../app.constant';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ITriviaAnswer, ITriviaQuiz } from 'src/app/core/models/triviaQuiz';
+import { AngularFireDatabase } from 'angularfire2/database';
 
 @Component({
   selector: 'app-trivia-quiz-view',
@@ -16,7 +17,6 @@ export class TriviaQuizViewComponent implements OnInit {
   public inProgress$: Observable<boolean>;
   public triviaQuizData$: Observable<TriviaQuizModel>;
 
-  nextLbl: string;
   inUse: boolean;
   totalQuestions : number;
   resultSummary: boolean;
@@ -29,6 +29,7 @@ export class TriviaQuizViewComponent implements OnInit {
   pageLabel: any;
 
   constructor(
+    private db: AngularFireDatabase,
     private router: Router,
     private route: ActivatedRoute,
     private triviaQuizHelperService: TriviaQuizHelperService) {
@@ -37,11 +38,11 @@ export class TriviaQuizViewComponent implements OnInit {
   }
 
   ngOnInit() {
+    //this.createTodo();
     this.dateTime = {
       start: new Date(),
       end: null
     }
-    this.nextLbl = 'SKIP';
     this.inUse = false;
     this.progressWidth = 0;
     this.questionNumber = 1;
@@ -52,6 +53,7 @@ export class TriviaQuizViewComponent implements OnInit {
       answer: '',
       status: false
     };
+    this.triviaQuizHelperService.resetTriviaQuiz();
     this.triviaQuizData$.subscribe((triviaQuizData: any) => {
       if(triviaQuizData.productDetail) {
         this.totalQuestions = triviaQuizData.triviaQuizList.length;
@@ -65,18 +67,13 @@ export class TriviaQuizViewComponent implements OnInit {
           time: '' 
         };
       });
-      //this.triviaQuizList = [ 
-      //  { "question": "Where do kids nowadays spend most of their time?", "answers": [ { "answer": "Room", "points": "30", "status": "false" }, { "answer": "School", "points": "20", "status": "false" }, { "answer": "Internet", "points": "12", "status": "true" }, { "answer": "Friend House", "points": "6", "status": "false" } ], "id": "4a40ad33-a1f8-4a46-af1a-00ac0c75f6ad", "status": true, "time": "" }, { "question": "Name a reason a person might wake up at 2 in the morning.", "answers": [ { "answer": "Bathroom", "points": "33", "status": "true" }, { "answer": "Baby/ Child", "points": "27", "status": "false" }, { "answer": "Bad dream", "points": "17", "status": "false" }, { "answer": "Heard Noise", "points": "11", "status": "false" }, { "answer": "Hot / Cold", "points": "6", "status": "false" } ], "id": "4a40ad33-a1f8-4a46-af1a-00ac0c75f6af", "status": false, "time": "" }, { "question": "Tell me something many people do just once a week.", "answers": [ { "answer": "Church", "points": "45", "status": "false" }, { "answer": "Groceries", "points": "32", "status": "true" }, { "answer": "Shopping", "points": "27", "status": "false" }, { "answer": "Cleaning", "points": "13", "status": "false" }, { "answer": "Sleep", "points": "6 ", "status": "false" } ], "id": "4a40ad33-a1f8-4a46-af1a-00ac0c75f6ae", "status": true, "time": "" } ];
-      //this.resultSummary = true;
     });
-
-
     this.pageLabel = APP_LABELS;
     window.scrollTo(0, 0);
     if (this.route.snapshot.params[`id`]) {
       setTimeout( () => {
         this.triviaQuizHelperService.getTriviaQuiz(this.route.snapshot.params[`id`]);
-      }, 0);
+      }, 2000);
     }
 
   }
@@ -89,9 +86,7 @@ export class TriviaQuizViewComponent implements OnInit {
         status: (ans.status === 'true')
       };
       if(this.totalQuestions !== this.questionNumber) {
-        this.nextLbl = 'NEXT';
-      } else {
-        this.nextLbl = 'RESULT';
+        this.getProgressBar();
       }
     }
   }
@@ -99,35 +94,32 @@ export class TriviaQuizViewComponent implements OnInit {
   getProgressBar() {
     setTimeout( () => {
       let increment = this.progressWidth;
-      increment = increment + 1;
+      increment = increment + 3;
       if (increment <= 100) {
           this.progressWidth = increment;
           this.getProgressBar();
       } else {
         setTimeout( () => {
-          this.nextQuestion();
+          if(this.totalQuestions !== this.questionNumber) {
+            this.nextQuestion();
+          } else {
+            this.resultSummary = true;
+            this.dateTime.end = new Date();
+          }
         }, 1000);
       }
-    }, 100);
-  }
-
-  skipQuestion() {
-    if(this.nextLbl==='RESULT') {
-      this.resultSummary = true;
-      this.dateTime.end = new Date();
-    } else {
-      this.nextQuestion();
-    }
+    }, 50);
   }
 
   goToHomePage() {
-    this.router.navigate(['/dashboard']);
+    if (confirm('Are you sure to exist?')) {
+      this.router.navigate(['/dashboard']);
+    }
   }
 
   nextQuestion() {
     this.progressWidth = 0;
     if(this.totalQuestions !== this.questionNumber) {
-      console.log(this.triviaQuizList);
       this.questionNumber ++; 
       this.userAnswer = {
         answer: '',
@@ -135,11 +127,251 @@ export class TriviaQuizViewComponent implements OnInit {
       };
       this.inUse = false;
     }
-
-    if(this.totalQuestions >this.questionNumber) {
-      this.nextLbl = 'SKIP';
-    } else {
-      this.nextLbl = '';
-    }
   }
+
+
+  createTodo() {
+    return this.db.list('trivia-aca751fb-7bcc-4304-a745-99eaf1f4765f').push({
+      "home": {
+          "featureProductList": null,
+          "categoryProductList": null
+      },
+      "category": {
+          "categoryProductList": null
+      },
+      "product": {
+          "categoryList": null,
+          "category": null,
+          "productList": null
+      },
+      "detail": {
+          "productDetail": null
+      },
+      "trivia": {
+          "productDetail": {
+              "deleted": false,
+              "categoryId": "a13642a1-9ef8-4d20-b0e1-b501efa4b666",
+              "unavailable": false,
+              "featureProduct": true,
+              "thumbImage": "https://quiz-ocean.s3.us-east-2.amazonaws.com/survey-quiz/superheros/batman.JPG",
+              "id": "12ca372c-7cbd-44fc-86a0-dc26f9322101",
+              "price": "",
+              "description": "The Dark Knight has many secrets that you need to uncover in this gk questions quiz",
+              "name": "The Ultimate Dark Night Trivia"
+          },
+          "triviaQuizList": [
+              {
+                  "question": "What planet is Superman from?",
+                  "id": "efb75d6b-90dc-4d88-9d1c-f03ba119e1d5",
+                  "answers": [
+                      {
+                          "answer": "Krypton",
+                          "points": "0",
+                          "status": "true"
+                      },
+                      {
+                          "answer": "Mars",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Pluto",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Jupitor",
+                          "points": "0",
+                          "status": "false"
+                      }
+                  ]
+              },
+              {
+                  "question": "Who is Superman's Pal?",
+                  "id": "efb75d6b-90dc-4d88-9d1c-f03ba119e1d6",
+                  "answers": [
+                      {
+                          "answer": "Batman",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Jimmy Olsen",
+                          "points": "0",
+                          "status": "true"
+                      },
+                      {
+                          "answer": "Perry White",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Pete Ross",
+                          "points": "0",
+                          "status": "false"
+                      }
+                  ]
+              },
+              {
+                  "question": "What is Superman's Kryptonian name?",
+                  "id": "efb75d6b-90dc-4d88-9d1c-f03ba119e1d7",
+                  "answers": [
+                      {
+                          "answer": "Jor-El",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Kal-El",
+                          "points": "0",
+                          "status": "true"
+                      },
+                      {
+                          "answer": "Ken-El",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Tom-El",
+                          "points": "0",
+                          "status": "false"
+                      }
+                  ]
+              },
+              {
+                  "question": "What is Superman's human name?",
+                  "id": "efb75d6b-90dc-4d88-9d1c-f03ba119e1d8",
+                  "answers": [
+                      {
+                          "answer": "Clark Kent",
+                          "points": "0",
+                          "status": "true"
+                      },
+                      {
+                          "answer": "Hal Jordan",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Bruce Wayne",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Barry Allen",
+                          "points": "0",
+                          "status": "false"
+                      }
+                  ]
+              },
+              {
+                  "question": "Who are Superman's adopted Parents?",
+                  "id": "efb75d6b-90dc-4d88-9d1c-f03ba119e1d9",
+                  "answers": [
+                      {
+                          "answer": "Joseph and Sarah",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Ben and May",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Jonathan and Martha",
+                          "points": "0",
+                          "status": "true"
+                      },
+                      {
+                          "answer": "Thomas and Martha",
+                          "points": "0",
+                          "status": "false"
+                      }
+                  ]
+              },
+              {
+                  "question": "Name of Superman's most famous pet",
+                  "id": "efb75d6b-90dc-4d88-9d1c-f03ba119e1d10",
+                  "answers": [
+                      {
+                          "answer": "Comet",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Beppo",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Ace",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Krypto",
+                          "points": "0",
+                          "status": "true"
+                      }
+                  ]
+              },
+              {
+                  "question": "What is Superman's greatest weakness?",
+                  "id": "efb75d6b-90dc-4d88-9d1c-f03ba119e1d11",
+                  "answers": [
+                      {
+                          "answer": "Gold",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Fire",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Water",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Kryptonite",
+                          "points": "0",
+                          "status": "true"
+                      }
+                  ]
+              },
+              {
+                  "question": "What Boxer did Superman fight?",
+                  "id": "efb75d6b-90dc-4d88-9d1c-f03ba119e1d12",
+                  "answers": [
+                      {
+                          "answer": "Sugar Ray Robinson",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Joe Louis",
+                          "points": "0",
+                          "status": "false"
+                      },
+                      {
+                          "answer": "Muhammad Ali",
+                          "points": "0",
+                          "status": "true"
+                      },
+                      {
+                          "answer": "George Foreman",
+                          "points": "0",
+                          "status": "false"
+                      }
+                  ]
+              }
+            
+          ]
+      }
+  });
+  }
+
 }

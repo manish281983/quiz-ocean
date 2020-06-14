@@ -33,6 +33,7 @@ action: TriviaQuizActions) {
             error: false,
         };
         case TriviaQuizActionTypes.TRIVIAQUIZ_SUCCESS:
+        console.log((action as TriviaQuizSuccessAction).triviaQuizData);
         return {
             ...state,
             inProgress: false,
@@ -44,6 +45,14 @@ action: TriviaQuizActions) {
             ...state,
             inProgress: false,
             error: true
+        };
+        case TriviaQuizActionTypes.TRIVIAQUIZ_RESET:
+        return {
+            ...state,
+            triviaQuizData: {
+                productDetail: null,
+                triviaQuizList: []
+            }
         };
         default:
         return state;
