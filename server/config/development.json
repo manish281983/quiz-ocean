@@ -1,0 +1,7 @@
+{
+    "name": "My App- Development",
+    "db": {
+        "path": "mongodb://localhost"
+    }
+
+}
