@@ -6,5 +6,9 @@
   {
     "name": "Trivia",
     "page": "category"
+  },
+  {
+    "name": "Wishes",
+    "page": "message"
   }
 ]

@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+//mongodb+srv://root:<password>@cluster0.xifew.gcp.mongodb.net/test
 
 mongoose.connect('mongodb://localhost/playground')
   .then(() => console.log('Connected to MongoDB...'))
@@ -18,11 +19,11 @@ const Course = mongoose.model('Course', new mongoose.Schema({
   }
 }));
 
-async function createAuthor(name, bio, website) { 
+async function createAuthor(name, bio, website) {
   const author = new Author({
-    name, 
-    bio, 
-    website 
+    name,
+    bio,
+    website
   });
 
   const result = await author.save();
@@ -31,15 +32,15 @@ async function createAuthor(name, bio, website) {
 
 async function createCourse(name, author) {
   const course = new Course({
-    name, 
+    name,
     author
-  }); 
-  
+  });
+
   const result = await course.save();
   console.log(result);
 }
 
-async function listCourses() { 
+async function listCourses() {
   const courses = await Course
     .find()
     .populate('author', 'name -_id')

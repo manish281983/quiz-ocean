@@ -1,0 +1,18 @@
+<div class="message-view">
+  <div class="row">
+    <div class="col-sm-2">
+      <div class="message-container">
+        <ul class="message-category-list"  *ngFor = "let subCategory of subCategoryList">
+          <li  (click)="selectCategoryAction(subCategory.id)"
+               [ngClass]="(selectedId === subCategory.id) ? 'message-category-selected': ''">
+            <i class="fa"
+               [ngClass]="(selectedId === subCategory.id) ? 'fa-caret-right': ''"
+               aria-hidden="true"></i> {{subCategory.name}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-sm-10">
+
+    </div>
+  </div>
+</div>

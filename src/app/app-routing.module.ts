@@ -4,17 +4,17 @@ import { ProductViewComponent } from './product/product-view/product-view.compon
 import { PaymentViewComponent } from './payment/payment-view/payment-view.component';
 
 const routes: Routes = [
-  { 
-    path: 'product/:id', 
+  {
+    path: 'product/:id',
     loadChildren: './product/product.module#ProductModule',
     pathMatch: 'full',
   },
-  { 
-    path: 'product', 
+  {
+    path: 'product',
     redirectTo: '/dashboard', pathMatch: 'full'
   },
   {
-    path: 'dashboard', 
+    path: 'dashboard',
     loadChildren: './dashboard/dashboard.module#DashboardModule',
     pathMatch: 'full',
   },
@@ -37,6 +37,16 @@ const routes: Routes = [
     path: 'trivia-quiz/:id',
     loadChildren: './trivia-quiz/trivia-quiz.module#TriviaQuizModule',
     pathMatch: 'full',
+  },
+  {
+    path: 'message/:id',
+    loadChildren: './messages/message.module#MessageModule',
+    pathMatch: 'full',
+  },
+  {
+      path: 'message',
+      loadChildren: './messages/message.module#MessageModule',
+      pathMatch: 'full',
   },
   { path: '',   redirectTo: '/dashboard', pathMatch: 'full' }
 ];
